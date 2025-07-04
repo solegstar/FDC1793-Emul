@@ -1,0 +1,95 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 15:43:16  May 08, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		fdc_emul_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C3T100C8
+set_global_assignment -name TOP_LEVEL_ENTITY fdc_emul
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:43:16  MAY 08, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_10 -to clk
+set_location_assignment PIN_66 -to FDC_CLK
+set_location_assignment PIN_72 -to FDC_A[0]
+set_location_assignment PIN_71 -to FDC_A[1]
+set_location_assignment PIN_1 -to FDC_DIR
+set_location_assignment PIN_89 -to FDC_DATA[6]
+set_location_assignment PIN_91 -to FDC_DATA[7]
+set_location_assignment PIN_97 -to FDC_nRES
+set_location_assignment PIN_85 -to FDC_DATA[5]
+set_location_assignment PIN_79 -to FDC_DATA[4]
+set_location_assignment PIN_22 -to FDC_HRDY
+set_location_assignment PIN_27 -to FDC_RCLK
+set_location_assignment PIN_28 -to FDC_nRAWR
+set_location_assignment PIN_26 -to FDC_RSTB
+set_location_assignment PIN_34 -to FDC_HLD
+set_location_assignment PIN_39 -to FDC_TR43
+set_location_assignment PIN_48 -to FDC_WG
+set_location_assignment PIN_49 -to FDC_WR_DATA
+set_location_assignment PIN_50 -to FDC_RDY
+set_location_assignment PIN_52 -to FDC_INTRQ
+set_location_assignment PIN_53 -to FDC_DRQ
+set_location_assignment PIN_54 -to FDC_WPRT
+set_location_assignment PIN_55 -to FDC_INDEX
+set_location_assignment PIN_56 -to FDC_TR00
+set_location_assignment PIN_57 -to FDC_WF_DE
+set_location_assignment PIN_65 -to FDC_DATA[3]
+set_location_assignment PIN_68 -to FDC_DATA[2]
+set_location_assignment PIN_69 -to FDC_DATA[1]
+set_location_assignment PIN_70 -to FDC_DATA[0]
+set_location_assignment PIN_73 -to FDC_nRD
+set_location_assignment PIN_74 -to FDC_nCS
+set_location_assignment PIN_75 -to FDC_nWR
+set_location_assignment PIN_98 -to FDC_SR
+set_location_assignment PIN_99 -to FDC_SL
+set_location_assignment PIN_100 -to FDC_STEP
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name VHDL_FILE ../../rtl/pll/pll.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/fdc_emul.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
