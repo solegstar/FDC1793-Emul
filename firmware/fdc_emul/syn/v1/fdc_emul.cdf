@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP1C3) Path("D:/GitHub/fdc_emul/release/") File("fdc_emul_ep1c3_v1.jic") MfrSpec(OpMask(1) SEC_Device(EPCS16) Child_OpMask(1 7));
+		Device PartName(EP1C3) Path("D:/GitHub/FDC1793-Emul/release/") File("fdc_emul_ep1c3_v1.jic") MfrSpec(OpMask(1) SEC_Device(EPCS16) Child_OpMask(1 7));
 
 ChainEnd;
 

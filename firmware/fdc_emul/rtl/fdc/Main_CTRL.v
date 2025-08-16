@@ -468,8 +468,8 @@ else
 							end
 						19: if ( rDELAY_CNT == 0 )
 								begin
-									rSTAGE <= rSTAGE + 1'b1;
 									rHEAD_IN_POS <= 1'b1;
+									rSTAGE <= rSTAGE + 1'b1;
 								end
 						20: if ( oIP_CNT == 9 )
 								begin
@@ -1016,7 +1016,6 @@ else
 								end
 							15:	if ( iBYTE_2_READ == 1'b1 )
 									begin
-										rSTAGE <= rSTAGE + 1'b1;
 										if ( rDRQ != 1'b0 )
 											rLOST_DATA <= 1'b1;
 										else
@@ -1024,6 +1023,7 @@ else
 												rREG_DAT <= iBYTE_2_MAIN;
 												rDRQ_S_CMD <= 1'b1;
 											end
+										rSTAGE <= rSTAGE + 1'b1;	// moved down
 									end
 							16: begin
 									rDRQ_S_CMD <= 1'b0;
@@ -1106,8 +1106,8 @@ else
 									end
 								else
 									begin
-										rSTAGE <= rSTAGE + 1'b1;
 										rIPTRG0 <= rIPTRG;
+										rSTAGE <= rSTAGE + 1'b1;
 									end
 							10:	begin
 									if ( rIPTRG0 != rIPTRG )

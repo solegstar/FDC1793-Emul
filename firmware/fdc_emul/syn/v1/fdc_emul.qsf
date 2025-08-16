@@ -50,7 +50,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
-set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_10 -to clk
 set_location_assignment PIN_66 -to FDC_CLK
@@ -99,3 +98,8 @@ set_global_assignment -name VERILOG_FILE ../../rtl/fdc/CRC16_D8.v
 set_global_assignment -name VERILOG_FILE ../../rtl/fdc/AMD.v
 set_global_assignment -name VERILOG_FILE ../../rtl/fdc_emul.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name CYCLONE_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_location_assignment PIN_6 -to DIR_245
+set_location_assignment PIN_17 -to nOE_245
+set_global_assignment -name MISC_FILE "D:/GitHub/FDC1793-Emul/firmware/fdc_emul/syn/v1/fdc_emul.dpf"
