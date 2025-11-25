@@ -1,8 +1,8 @@
-ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
+ACCEL_ASCII "D:\GitHub\FDC1793-Emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
 
 (asciiHeader 
   (asciiVersion 3 0)
-  (timeStamp 2025 7 4 13 13 55)
+  (timeStamp 2025 11 25 16 23 40)
   (program "P-CAD 2006 PCB" "19.02.9589")
   (copyright "Copyright © 1991-2006 Altium Limited")
   (fileAuthor "")
@@ -1489,7 +1489,7 @@ ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
   (compInst "ZQ1"
     (compRef "KXO-V97_1")
     (originalName "KXO-V97")
-    (compValue "48MHZ")
+    (compValue "32MHZ")
   )
   (net "GND" 
     (node "C1" "2")
@@ -2179,6 +2179,8 @@ ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
       (patternGraphicsRef 
         (patternGraphicsNameRef "Primary")
         (attr "Type" "EP1C3T100C8N" (pt 11.29561 -8.50161) (rotation 90.0) (textStyleRef "(Default)") )
+        (attr "RefDes" "DD1" (pt -1.651 0.508) (isVisible True) (textStyleRef "RefDes") )
+        (attr "Value" "EP1C3T100C8N" (pt -5.842 -1.27) (isVisible True) (textStyleRef "RefDes") )
         (attr "Published" "4-Mar-2005" (rotation 90.0) (textStyleRef "(Default)") )
         (attr "DatasheetDocument" "ver1.6, Mar-2005" (rotation 90.0) (textStyleRef "(Default)") )
         (attr "PackageDocument" "ver13.0, May-2005" (rotation 90.0) (textStyleRef "(Default)") )
@@ -2192,8 +2194,6 @@ ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
         (attr "ComponentLink2URL" "http://www.altera.com/literature/hb/cyc/cyclone_device_handbook.pdf" (rotation 90.0) (textStyleRef "(Default)") )
         (attr "ComponentLink3DescAC" "Packaging Specification" (rotation 90.0) (textStyleRef "(Default)") )
         (attr "ComponentLink3URL" "http://www.altera.com/literature/ds/dspkg.pdf" (rotation 90.0) (textStyleRef "(Default)") )
-        (attr "RefDes" "DD1" (pt -1.651 0.508) (isVisible True) (textStyleRef "RefDes") )
-        (attr "Value" "EP1C3T100C8N" (pt -5.842 -1.27) (isVisible True) (textStyleRef "RefDes") )
       )
     )
     (pattern (patternRef "CC0603_1") (refDesRef "C5") (pt 297.815 267.335) (rotation 270.0) (isFlipped True)(patternGraphicsNameRef "Primary")
@@ -2210,14 +2210,6 @@ ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
         (attr "Type" "RR0603" (pt -2.875 0.0) (rotation 270.0) (justify Center) (textStyleRef "(Default)") )
         (attr "Value" "2k4" (rotation 270.0) (textStyleRef "(Default)") )
         (attr "RefDes" "R9" (pt 0.0 -3.048) (rotation 270.0) (isVisible True) (justify Center) (textStyleRef "RefDes") )
-      )
-    )
-    (pattern (patternRef "QSMD7X5_1") (refDesRef "ZQ1") (pt 292.481 243.713) (rotation 90.0) (isFlipped True)(patternGraphicsNameRef "Primary")
-      (patternGraphicsRef 
-        (patternGraphicsNameRef "Primary")
-        (attr "Type" "KXO-V97" (pt -5.08 -2.54) (rotation 90.0) (isFlipped True) (textStyleRef "(Default)") )
-        (attr "Value" "48MHZ" (pt 0.0 7.62) (rotation 90.0) (isFlipped True) (textStyleRef "(Default)") )
-        (attr "RefDes" "ZQ1" (pt -1.27 -2.667) (isFlipped True) (isVisible True) (textStyleRef "RefDes") )
       )
     )
     (pattern (patternRef "SOT223_1") (refDesRef "DA2") (pt 292.735 250.19) (rotation 180.0) (patternGraphicsNameRef "Primary")
@@ -2244,11 +2236,19 @@ ACCEL_ASCII "D:\GitHub\fdc_emul\pcad\kpro\fdc_emul_kpro_ascii.PCB"
         (attr "RefDes" "C15" (pt -0.254 -1.778) (isVisible True) (justify Center) (textStyleRef "RefDes") )
       )
     )
+    (pattern (patternRef "QSMD7X5_1") (refDesRef "ZQ1") (pt 292.481 243.713) (rotation 90.0) (isFlipped True)(patternGraphicsNameRef "Primary")
+      (patternGraphicsRef 
+        (patternGraphicsNameRef "Primary")
+        (attr "Type" "KXO-V97" (pt -5.08 -2.54) (rotation 90.0) (isFlipped True) (textStyleRef "(Default)") )
+        (attr "Value" "32MHZ" (pt 0.0 7.62) (rotation 90.0) (isFlipped True) (textStyleRef "(Default)") )
+        (attr "RefDes" "ZQ1" (pt -1.27 -2.667) (isFlipped True) (isVisible True) (textStyleRef "RefDes") )
+      )
+    )
     (pattern (patternRef "DIP40_SMD_BOT_1") (refDesRef "X1") (pt 289.56 292.1) (patternGraphicsNameRef "Primary")
       (patternGraphicsRef 
         (patternGraphicsNameRef "Primary")
-        (attr "Type" "DIP40_SMD_BOT" (pt 10.795 -53.34) (isFlipped True) (textStyleRef "T:H91W10") )
         (attr "Value" "MB8877" (textStyleRef "(Default)") )
+        (attr "Type" "DIP40_SMD_BOT" (pt 10.795 -53.34) (isFlipped True) (textStyleRef "T:H91W10") )
         (attr "RefDes" "X1" (pt 17.526 1.016) (isFlipped True) (isVisible True) (textStyleRef "RefDes") )
       )
     )
