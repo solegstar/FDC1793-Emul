@@ -1,10 +1,10 @@
-/* Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition */
+/* Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP1C3) Path("D:/GitHub/fdc_emul/release/") File("fdc_emul_ep1c3_v2.jic") MfrSpec(OpMask(1) SEC_Device(EPCS16) Child_OpMask(1 7));
+		Device PartName(EP1C3T100) Path("D:/GitHub/FDC1793-Emul/firmware/fdc_emul/syn/v2/") File("fdc_emul.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

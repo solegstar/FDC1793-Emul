@@ -11,6 +11,13 @@ module fdc_emul (
 	// clocks
 	input wire         clk,
 	input wire         FDC_CLK,
+	
+	// debug signals
+	input 	wire	miso,
+	output	wire	mosi,
+	output	wire	scki,
+	output	wire	cs,
+	output	wire	reset,
 
 	// cpu signals
 	input	wire [1:0] 	FDC_A,
@@ -64,6 +71,11 @@ wire	[15:0]	crc16_d8;
 assign FDC_RSTB = 1'b0;
 assign FDC_SL = 1'b0;	// EARLY (SL)
 assign FDC_SR = 1'b0;	// LATE	(SR)
+
+assign mosi = FDC_nRAWR;
+assign scki = FDC_RCLK;
+assign cs = FDC_TR00;
+assign reset = FDC_HLD;
 
 assign FDC_WF_DE = wg ? 1'bz : vfoe;
 
@@ -121,7 +133,7 @@ always @( posedge clk )
 
 // data output
 assign FDC_DATA = ~FDC_nRD ? bdi_do : 8'bzzzzzzzz;
-assign nOE_245 = FDC_nCS;
+assign nOE_245 = 1'b0;
 assign DIR_245 = FDC_nRD;
 	
 Main_CTRL U14 (
